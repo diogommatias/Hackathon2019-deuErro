@@ -1,0 +1,3 @@
+rootProject.name = 'myItinerary'
+
+include ':app'
