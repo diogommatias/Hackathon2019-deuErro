@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import Cities from '../../data/cities.json'
 
 @Component({
   selector: 'app-home-search',
@@ -11,16 +12,12 @@ import { map, startWith } from 'rxjs/operators';
 export class HomeSearchComponent implements OnInit {
 
   homeSearchForm: FormGroup;
-  filteredOptions: Observable<string[]>;
-
-  options = [
-    'Lisboa',
-    'Porto',
-  ];
+  filteredOptions: Observable<any[]>;
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+
     this.homeSearchForm = this.fb.group({
       cityName: ""
     });
@@ -32,15 +29,17 @@ export class HomeSearchComponent implements OnInit {
       );
   }
 
-  private _filter(value: string): string[] {
+  private _filter(value: string) {
     const filterValue = value.toLowerCase();
 
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+    return Cities.Cities.filter(city => city["name"].toLowerCase().includes(filterValue))
   }
 
   get cityName(): FormControl{
     return this.homeSearchForm.get("cityName") as FormControl;
   }
+
+
 
 
 }
