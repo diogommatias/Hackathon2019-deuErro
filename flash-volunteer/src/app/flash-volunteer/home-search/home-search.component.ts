@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-home-search',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeSearchComponent implements OnInit {
 
-  constructor() { }
+  homeSearchForm: FormGroup;
+
+  options = [
+    'Lisboa',
+    'Porto',
+  ];
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.homeSearchForm = this.fb.group({
+      cityName: ""
+    });
   }
 
 }
