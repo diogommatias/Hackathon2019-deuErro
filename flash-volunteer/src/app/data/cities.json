@@ -1,1 +1,40 @@
-
+{
+	"Cities": [
+		{
+			"name": "Lisboa",
+			"img": "https://www.gqportugal.pt/media/pages/2240/full_lisboa-cidade-do-ano.jpg",
+			"towns": [
+				{
+					"name": "Lisboa"
+				},
+				{
+					"name": "Oeiras"
+				},
+				{
+					"name": "Torres Vedras"
+				},
+				{
+					"name": "Vila France de Xira"
+				}
+			]
+		},
+		{
+			"name": "Porto",
+			"img": "https://du1frgvkr39c.cloudfront.net/sites/5adf778b6eabcc00190b75b1/content_entry5adf77af6eabcc00190b75b6/5ae4631bdfa201000daefdc9/files/guide-porto-portugal-seafood-itinerary-main-image.jpg?1550721482",
+			"towns": [
+				{
+					"name": "Matosinhos"
+				},
+				{
+					"name": "Porto"
+				},
+				{
+					"name": "Póvoa de Varzim"
+				},
+				{
+					"name": "Vila do Conde"
+				}
+			]
+		}
+	]
+}
