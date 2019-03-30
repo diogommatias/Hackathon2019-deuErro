@@ -17,8 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CityViewComponent } from './flash-volunteer/city-view/city-view.component';
 import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
 import { EventComponent } from './flash-volunteer/event/event.component'; 
-
-
+import { MatToolbarModule } from '@angular/material/toolbar'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +39,8 @@ import { EventComponent } from './flash-volunteer/event/event.component';
     ReactiveFormsModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

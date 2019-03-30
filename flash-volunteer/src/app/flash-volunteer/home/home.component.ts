@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  flash_volunteer_logo = "../../../assets/img/lgo.svg"
+
   ngOnInit() {
   }
 
