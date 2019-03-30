@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-event',
@@ -7,9 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class EventComponent implements OnInit {
 
-  constructor() { }
+  eventName: string;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.eventName = this.route.snapshot.paramMap.get("event");
   }
 
 }

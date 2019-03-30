@@ -45,6 +45,4 @@ export class EventCardComponent implements OnInit {
     return this.event["startTime"];
   }
 
-  
-
 }
