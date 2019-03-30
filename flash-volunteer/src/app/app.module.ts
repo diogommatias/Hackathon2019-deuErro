@@ -16,7 +16,8 @@ import { MatInputModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { CityViewComponent } from './flash-volunteer/city-view/city-view.component';
 import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
-import { EventComponent } from './flash-volunteer/event/event.component'; 
+import { EventComponent } from './flash-volunteer/event/event.component';
+import { SidebarComponent } from './flash-volunteer/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { EventComponent } from './flash-volunteer/event/event.component';
     HomeSearchComponent,
     CityViewComponent,
     AddEventComponent,
-    EventComponent
+    EventComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
