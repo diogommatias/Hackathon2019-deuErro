@@ -1,0 +1,24 @@
+.dialog-content-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.organization-logo{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.dialog-content-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle{
+    font-size: 18px;
+    font-weight: 300;
+}

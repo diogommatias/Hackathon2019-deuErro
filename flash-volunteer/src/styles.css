@@ -33,3 +33,7 @@ html, body {
 .mat-input-wrapper {
   width: 400px !important;
 }
+
+p{
+  font-family: Roboto,"Helvetica Neue",sans-serif; 
+}

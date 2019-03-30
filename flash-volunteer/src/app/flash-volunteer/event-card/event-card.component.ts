@@ -20,6 +20,8 @@ export class EventCardComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     
     dialogConfig.data = this.event;
+    dialogConfig.restoreFocus = false;
+    dialogConfig.autoFocus = false;
 
     const dialogRef = this.dialog.open(EventRegistDialogComponent, dialogConfig);
 

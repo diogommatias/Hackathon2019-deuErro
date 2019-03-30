@@ -1,20 +1,32 @@
-<!-- <h1 mat-dialog-title></h1>
-<mat-card>
-  <div mat-dialog-content>
-    <p>Volunteer at {{eventOrganization}}</p>
-    <br>
-    <p>{{eventDescription}}</p>
+<h1 mat-dialog-title>{{eventName}}</h1>
+<div mat-dialog-content>
+  <div class="dialog-content-row">
+    <img src="http://www.vigeo-eiris.com/wp-content/uploads/2012/03/logo-onu.jpg" class="organization-logo">
+    <div class="organization-info">
+      <p class="subtitle">Organization:</p>
+      <p>{{eventOrganization}}</p>
+    </div>
   </div>
-</mat-card>
-<mat-dialog-actions>
-  <button mat-button (click)="cancel()">canceled</button>
-  <button mat-button (click)="register()">success</button>
-</mat-dialog-actions> -->
+  <div class="dialog-content-row">
+    <p>
+      <span class="subtitle">Start Date: </span>
+      {{eventStartDate | date}}
+    </p>
+    <p>
+      <span class="subtitle">End Date: </span>
+      {{eventEndDate | date}}
+    </p>
+  </div>
+  <div class="dialog-content-col">
+    <p class="subtitle">Location:</p>
+    <p>{{eventLocation}}</p>
+    <p class="subtitle">Description:</p>
+    <p>{{eventDescription}}</p>
 
-<mat-card>
-  <mat-card-title>{{eventName}}</mat-card-title>
-  <mat-card-actions>
-    <button mat-button (click)="cancel()">canceled</button>
-    <button mat-raised-button color="primary" (click)="register()">success</button>
-  </mat-card-actions>
-</mat-card>
+  </div>
+
+</div>
+<mat-dialog-actions class="dialog-content-row">
+  <button mat-button (click)="cancel()">Back</button>
+  <button mat-raised-button color="primary" (click)="register()">Sign Up</button>
+</mat-dialog-actions>
