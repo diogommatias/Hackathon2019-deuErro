@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import Events from "../../data/events.json"
 
 @Component({
   selector: 'app-add-event',
@@ -34,5 +35,9 @@ export class AddEventComponent implements OnInit {
 
   get category():FormControl{
     return this.form.get("category") as FormControl;
+  }
+
+  submit() {
+    Events.Events.push(this.form.value);
   }
 }

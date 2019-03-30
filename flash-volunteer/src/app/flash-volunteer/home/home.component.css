@@ -5,8 +5,17 @@ body {
 #home {
   height: 100vh;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  background-image: url("../../../assets/img/mozambique.jpg");
+  background-size: cover;
+}
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+  height: auto;
 }
 
 #flash_volunteer_logo {
@@ -14,7 +23,7 @@ body {
 }
 
 mat-toolbar {
- background: transparent;
+  background: transparent;
 }
 
 .spacer {
@@ -27,6 +36,9 @@ mat-toolbar {
 }
 
 app-home-search {
+  padding-top: 60px;
+  transform: translateX(-250px);
   display: flex;
   justify-content: center;
 }
+

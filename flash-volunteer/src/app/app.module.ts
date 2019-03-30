@@ -20,12 +20,16 @@ import { EventComponent } from './flash-volunteer/event/event.component';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { EventCardComponent } from './flash-volunteer/event-card/event-card.component';
 import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
 import { MatDialogModule } from '@angular/material/dialog';
+<<<<<<< HEAD
 import { OrganizationPageComponent } from './flash-volunteer/organization-page/organization-page.component';
 import { MatTabsModule } from '@angular/material/tabs';
+=======
+import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialog/event-regist-dialog.component';
+>>>>>>> ae1d90aea4c1adaa444634c117300c442149f16e
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { MatTabsModule } from '@angular/material/tabs';
     EventComponent,
     EventCardComponent,
     SearchPageComponent,
+<<<<<<< HEAD
     OrganizationPageComponent
+=======
+    EventRegistDialogComponent
+>>>>>>> ae1d90aea4c1adaa444634c117300c442149f16e
   ],
   imports: [
     BrowserModule,
@@ -63,7 +71,7 @@ import { MatTabsModule } from '@angular/material/tabs';
       apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
     })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [EventRegistDialogComponent]
 })
 export class AppModule { }

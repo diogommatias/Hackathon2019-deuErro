@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  init: string = "olaasdfasdf";
+  flash_volunteer_logo = "../../../assets/img/logo.svg"
+  banner_background_image = ""
 
-  constructor() { }
-
-  flash_volunteer_logo = "../../../assets/img/lgo.svg"
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  go(s){
+    this.router.navigate([s]); 
   }
 
 }
