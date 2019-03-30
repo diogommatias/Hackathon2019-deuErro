@@ -35,10 +35,13 @@ mat-toolbar {
   justify-content: center;
 }
 
+
+
 app-home-search {
   padding-top: 60px;
-  transform: translateX(-250px);
+  width: 100%;
   display: flex;
-  justify-content: center;
+  padding-left: 250px;
+  justify-content: flex-start;
 }
 
