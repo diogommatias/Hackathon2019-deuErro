@@ -1,0 +1,11 @@
+div.spacer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: stretch;
+}
+
+.mat-form-field {
+    padding: 0pt 5pt;
+    flex-grow: 1;
+}

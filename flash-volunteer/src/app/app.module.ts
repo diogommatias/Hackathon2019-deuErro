@@ -12,12 +12,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatAutocompleteModule } from '@angular/material/autocomplete'; 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { CityViewComponent } from './flash-volunteer/city-view/city-view.component';
 import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
-import { EventComponent } from './flash-volunteer/event/event.component'; 
+import { EventComponent } from './flash-volunteer/event/event.component';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
+import { SidebarComponent } from './flash-volunteer/sidebar/sidebar.component';
+import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,10 +30,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     HomeSearchComponent,
     CityViewComponent,
     AddEventComponent,
-    EventComponent
+    EventComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatButtonModule,
     MatSidenavModule,
@@ -39,8 +46,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     ReactiveFormsModule,
     MatInputModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatIconModule,
-    MatToolbarModule
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
