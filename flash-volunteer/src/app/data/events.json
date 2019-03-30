@@ -33,7 +33,7 @@
     },
     {
       "name": "Recolha para Moçambique",
-      "category": ["Recolha de Alimentos", "Recolha de Mantimentos"],
+      "category": "Recolha de Mantimentos",
       "description": "Recolha de alimentos e mantimentos para Moçambique",
       "institution": "Ajudantes Remotos",
       "place": "Escolas e Faculdades",

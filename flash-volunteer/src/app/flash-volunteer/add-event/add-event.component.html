@@ -5,11 +5,19 @@
         <mat-label>Name</mat-label>
         <input matInput formControlName="name">
       </mat-form-field>
+
       <mat-form-field appearance="outline">
         <mat-label>Category</mat-label>
-        <input matInput formControlName="category">
+        <mat-select formControlName="category" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let cat of categories" [value]="cat">
+            {{cat}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="category.hasError('required')">Please choose a category</mat-error>
       </mat-form-field>
     </div>
+
     <div class="spacer">
       <mat-form-field appearance="outline">
         <mat-label>Institution</mat-label>

@@ -21,7 +21,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { SidebarComponent } from './flash-volunteer/sidebar/sidebar.component';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -50,6 +50,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
+    MatSelectModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
     })
