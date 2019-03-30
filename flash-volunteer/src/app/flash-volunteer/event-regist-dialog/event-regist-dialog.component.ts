@@ -25,7 +25,7 @@ export class EventRegistDialogComponent implements OnInit {
   register() {
     console.log("registado");
     this.dialogRef.close("success")
-    this.router.navigate([]);
+    this.router.navigate(["../../"]);
   }
 
   cancel() {

@@ -9,10 +9,11 @@
       <p>{{eventDescription}}</p>
     </div>
     <div>
-      <p>{{eventDate}}</p>
+      <p> Start date: {{eventStartDate | date}} </p>
+      <p> End date: {{eventEndDate | date}}</p>
     </div>
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions class="register-button">
     <button mat-button (click)="register()">Inscrever-me</button>
   </mat-card-actions>
 </mat-card>

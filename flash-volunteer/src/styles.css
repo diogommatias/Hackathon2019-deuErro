@@ -37,3 +37,8 @@ html, body {
 p{
   font-family: Roboto,"Helvetica Neue",sans-serif; 
 }
+
+.subtitle{
+  font-size: 18px;
+  font-weight: 300;
+}
