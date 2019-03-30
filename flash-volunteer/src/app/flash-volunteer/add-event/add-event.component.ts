@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-event',
@@ -10,19 +10,29 @@ export class AddEventComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private f: FormBuilder) { }
+  categories: String[] = [
+    "Conservation",
+    "Humanitary",
+    "Emergency",
+    "Cultural"
+  ]
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.form = this.f.group({
-      name: "",
-      category: "",
-      description: "",
-      institution: "",
-      place: "",
-      startDate: "",
-      endDate: "",
-      startTime: ""
+    this.form = this.fb.group({
+      name: ["", Validators.required],
+      category: ["", Validators.required],
+      description: ["", Validators.required],
+      organization: ["", Validators.required],
+      place: ["", Validators.required],
+      startDate: ["", Validators.required],
+      endDate: ["", Validators.required],
+      startTime: ["", Validators.required]
     })
   }
 
+  get category():FormControl{
+    return this.form.get("category") as FormControl;
+  }
 }
