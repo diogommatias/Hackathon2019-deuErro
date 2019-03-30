@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './flash-volunteer/home/home.component';
-import { CityViewComponent } from './flash-volunteer/city-view/city-view.component';
-import { SidebarComponent } from './flash-volunteer/sidebar/sidebar.component';
+import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
+import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {
+      title: 'Flash Volunteer'
+    },
   },
   {
-    path: 'city',
-    component: CityViewComponent
+    path: 'cities/:city',
+    component: SearchPageComponent
   },
   {
-    path: 'sidebar',
-    component: SidebarComponent
+    path: 'add',
+    component: AddEventComponent
   }
 ];
 

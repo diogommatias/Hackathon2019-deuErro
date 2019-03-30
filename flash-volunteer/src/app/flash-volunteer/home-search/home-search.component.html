@@ -8,7 +8,7 @@
       <div>
         <form [formGroup]="homeSearchForm">
           <mat-form-field>
-            <input type="text" placeholder="Pick one" matInput formControlName="cityName" [matAutocomplete]="auto">
+            <input type="text" placeholder="Pick one" matInput formControlName="cityName" [matAutocomplete]="auto" required>
             <mat-autocomplete #auto="matAutocomplete">
               <mat-option *ngFor="let option of filteredOptions | async" [value]='getCityNameFromJson(option)'>
                 {{getCityNameFromJson(option)}}
@@ -19,10 +19,8 @@
       </div>
       <div></div>
       <div>
-        <button mat-button>Go!</button>
+        <button mat-button (click)="go()" [disabled]="homeSearchForm.invalid">Go!</button>
       </div>
     </div>
   </mat-card-content>
 </mat-card>
-
-{{homeSearchForm.value | json}}

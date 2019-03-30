@@ -17,10 +17,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { CityViewComponent } from './flash-volunteer/city-view/city-view.component';
 import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
 import { EventComponent } from './flash-volunteer/event/event.component';
-import { SidebarComponent } from './flash-volunteer/sidebar/sidebar.component';
+import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
 import { EventCardComponent } from './flash-volunteer/event-card/event-card.component';
+import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
 
 
 @NgModule({
@@ -31,8 +32,8 @@ import { EventCardComponent } from './flash-volunteer/event-card/event-card.comp
     CityViewComponent,
     AddEventComponent,
     EventComponent,
-    SidebarComponent,
-    EventCardComponent
+    EventCardComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +48,7 @@ import { EventCardComponent } from './flash-volunteer/event-card/event-card.comp
     ReactiveFormsModule,
     MatInputModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,

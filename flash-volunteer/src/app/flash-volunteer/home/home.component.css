@@ -1,0 +1,32 @@
+body {
+  min-height: 100%;
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#flash_volunteer_logo {
+  height: 70%;
+}
+
+mat-toolbar {
+ background: transparent;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+#more {
+  display: flex;
+  justify-content: center;
+}
+
+app-home-search {
+  display: flex;
+  justify-content: center;
+}
