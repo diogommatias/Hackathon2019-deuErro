@@ -25,6 +25,10 @@ import { EventCardComponent } from './flash-volunteer/event-card/event-card.comp
 import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialog/event-regist-dialog.component';
+import { PrizesComponent } from './flash-volunteer/prizes/prizes.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list'; 
+import { MatDividerModule } from '@angular/material/divider'; 
 
 @NgModule({
   declarations: [
@@ -36,7 +40,8 @@ import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialo
     EventComponent,
     EventCardComponent,
     SearchPageComponent,
-    EventRegistDialogComponent
+    EventRegistDialogComponent,
+    PrizesComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +62,9 @@ import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialo
     MatIconModule,
     MatSelectModule,
     MatDialogModule,
+    MatGridListModule,
+    MatListModule,
+    MatDividerModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
     })
