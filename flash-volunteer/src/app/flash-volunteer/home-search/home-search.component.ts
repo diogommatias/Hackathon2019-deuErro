@@ -39,6 +39,9 @@ export class HomeSearchComponent implements OnInit {
     return this.homeSearchForm.get("cityName") as FormControl;
   }
 
+  getCityNameFromJson(city: any){
+    return city["name"];
+  }
 
 
 

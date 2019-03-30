@@ -1,2 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-search {
+  width: 500px;
+}
+
+.home-search-text {
+  text-align: center;
+}
+
+.full-width {
+  width: 95%;
+}
+
+.mat-input-wrapper {
+  width: 400px !important;
+}
