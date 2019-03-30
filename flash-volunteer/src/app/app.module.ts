@@ -18,10 +18,11 @@ import { CityViewComponent } from './flash-volunteer/city-view/city-view.compone
 import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
 import { EventComponent } from './flash-volunteer/event/event.component';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
-import { SidebarComponent } from './flash-volunteer/sidebar/sidebar.component';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
+import { EventCardComponent } from './flash-volunteer/event-card/event-card.component';
+import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatSelectModule} from '@angular/material/select';
     CityViewComponent,
     AddEventComponent,
     EventComponent,
-    SidebarComponent
+    EventCardComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,

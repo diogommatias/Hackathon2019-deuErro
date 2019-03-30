@@ -24,7 +24,7 @@ export class AddEventComponent implements OnInit {
       name: ["", Validators.required],
       category: ["", Validators.required],
       description: ["", Validators.required],
-      institution: ["", Validators.required],
+      organization: ["", Validators.required],
       place: ["", Validators.required],
       startDate: ["", Validators.required],
       endDate: ["", Validators.required],

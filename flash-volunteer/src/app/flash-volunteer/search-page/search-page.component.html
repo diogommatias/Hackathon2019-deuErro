@@ -1,0 +1,10 @@
+<mat-sidenav-container class="container-event-view">
+  <mat-sidenav #sidenav opened mode="side" position="start">
+    <app-event-card *ngFor="let event of events" [event]="event"> </app-event-card>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+    <button mat-button (click)="sidenav.toggle()" class="sidenav-toggle"><i class="fa fa-bars"></i></button>
+    <app-city-view></app-city-view>
+  </mat-sidenav-content>
+</mat-sidenav-container>
