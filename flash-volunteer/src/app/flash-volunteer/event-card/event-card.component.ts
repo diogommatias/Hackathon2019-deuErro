@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-event-card',
@@ -7,12 +7,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class EventCardComponent implements OnInit {
   
-  @Input()event: string;
+  @Input() event;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(event);
   }
+
+  get Name(){
+    console.log(event);
+    return event["name"];
+  }
+
+
+
 
 }

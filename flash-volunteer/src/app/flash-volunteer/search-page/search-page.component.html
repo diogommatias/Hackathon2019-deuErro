@@ -1,6 +1,6 @@
 <mat-sidenav-container class="container-event-view">
   <mat-sidenav #sidenav opened mode="side" position="start">
-    <app-event-card *ngFor="let event of events" [event]="event"> </app-event-card>
+    <app-event-card *ngFor="let e of events" [event]="e"> </app-event-card>
   </mat-sidenav>
   
   <mat-sidenav-content>

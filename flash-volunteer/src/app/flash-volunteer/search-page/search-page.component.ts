@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Events from '../../data/events.json';
 
 @Component({
   selector: 'app-search-page',
@@ -7,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  events = ["ola", "adeus"];
+  events = Events.Events;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.events)
   }
+  
 
 }
