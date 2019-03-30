@@ -19,7 +19,7 @@
       </div>
       <div></div>
       <div>
-        <button [disabled]="homeSearchForm.invalid" mat-button>Go!</button>
+        <button mat-button (click)="go()" [disabled]="homeSearchForm.invalid">Go!</button>
       </div>
     </div>
   </mat-card-content>
