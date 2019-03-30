@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import Cities from '../../data/cities.json';
+import Phrases from '../../data/promptPhrases.json';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,6 +13,8 @@ import { Router } from '@angular/router';
 })
 export class HomeSearchComponent implements OnInit {
 
+  prompt_phrase = Phrases.Phrases[Math.floor(Math.random() * (Phrases.Phrases.length))];
+    
   homeSearchForm: FormGroup;
   filteredOptions: Observable<any[]>;
 
@@ -47,7 +50,5 @@ export class HomeSearchComponent implements OnInit {
   go(){
     this.router.navigate(['/cities/', this.cityName.value]);
   }
-
-
 
 }

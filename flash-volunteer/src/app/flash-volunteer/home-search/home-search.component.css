@@ -1,0 +1,25 @@
+.home-search {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.form-container,
+.home-search-text {
+  display: flex;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.do-button-container {
+  display: flex;
+  align-self: flex-end;
+}
+
+form,
+.mat-form-field {
+  width: 100%;
+}
+
