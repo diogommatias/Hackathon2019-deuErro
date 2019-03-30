@@ -9,3 +9,11 @@ div.spacer {
     padding: 0pt 5pt;
     flex-grow: 1;
 }
+
+.mat-flat-button {
+    width: 100%;
+}
+
+.mat-card-title {
+    text-align: left;
+}
