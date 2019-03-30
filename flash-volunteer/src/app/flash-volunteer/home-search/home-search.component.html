@@ -1,3 +1,19 @@
-<p>
-  home-search works!
-</p>
+<mat-card>
+  <mat-card-title>Volunteer</mat-card-title>
+  <mat-card-subtitle>Where do you want to Volunteer?</mat-card-subtitle>
+  <mat-card-content>
+    <form [formGroup]="homeSearchForm">
+      <mat-form-field>
+        <input type="text" placeholder="Pick one" matInput formControlName="cityName"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]='option["name"]'>
+            {{option["name"]}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+{{homeSearchForm.value | json}}
