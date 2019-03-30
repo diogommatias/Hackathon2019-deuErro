@@ -20,6 +20,7 @@ import { EventComponent } from './flash-volunteer/event/event.component';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
+import { EventCardComponent } from './flash-volunteer/event-card/event-card.component';
 import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
 
 
@@ -31,6 +32,7 @@ import { SearchPageComponent } from './flash-volunteer/search-page/search-page.c
     CityViewComponent,
     AddEventComponent,
     EventComponent,
+    EventCardComponent,
     SearchPageComponent
   ],
   imports: [

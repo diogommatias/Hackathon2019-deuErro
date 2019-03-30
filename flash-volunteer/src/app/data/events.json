@@ -2,30 +2,30 @@
 
   "Events": [
     {
-      "name": "Alegria no Hospital de São João",
-      "category": "Animar os Hospitais",
-      "description": "Animar as crianças nas alas do centro hospitalar de São João",
-      "institution": "Amigo Imaginário",
-      "place": "Porto",
+      "name": "Alegria no Hospital de Santa Maria",
+      "category": "Humanitário",
+      "description": "Animar as crianças nas alas do centro hospitalar de Santa Maria",
+      "organization": "Amigo Imaginário",
+      "place": "Lisboa",
       "startDate": "06-04-2019",
       "endDate": "06-04-2019",
       "startTime": "10-00"
     },
     {
       "name": "Sopa dos Pobres",
-      "category": "Sopa dos Pobres",
+      "category": "Humanitário",
       "description": "Entrega de roupa e comida aos sem-abrigo",
-      "institution": "Vida Tem Abrigo",
-      "place": "Matosinhos",
+      "organization": "Vida Tem Abrigo",
+      "place": "Lisboa",
       "startDate": "12-04-2019",
       "endDate": "12-04-2019",
-      "startTime": "10-00"
+      "startTime": "22-00"
     },
     {
       "name": "Limpar Monsanto",
-      "category": "Limpeza de Matos e Florestas",
+      "category": "Conservação",
       "description": "Vem ajudar a limpar Monsanto",
-      "institution": "Ajudar os Verdes",
+      "organization": "Ajudar os Verdes",
       "place": "Lisboa",
       "startDate": "20-04-2019",
       "endDate": "21-04-2019",
@@ -33,13 +33,23 @@
     },
     {
       "name": "Recolha para Moçambique",
-      "category": ["Recolha de Alimentos", "Recolha de Mantimentos"],
+      "category": "Emergência",
       "description": "Recolha de alimentos e mantimentos para Moçambique",
-      "institution": "Ajudantes Remotos",
-      "place": "Escolas e Faculdades",
+      "organization": "Ajudantes Remotos",
+      "place": "Portugal",
       "startDate": "21-03-2019",
       "endDate": "4-04-2019",
-      "startTime": "09-00"
+      "startTime": null
+    },
+    {
+      "name": "Voluntário Nos Alive",
+      "category": "Cultural",
+      "description": "Voluntário no festival do Nos Alive",
+      "organization": "Everything is New",
+      "place": "Oeiras",
+      "startDate": "13-06-2019",
+      "endDate": "27-06-2019",
+      "startTime": null
     }
   ]
 
