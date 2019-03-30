@@ -16,9 +16,9 @@
       </mat-card-actions>
     </mat-card>
   </mat-sidenav>
-
+  
   <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.toggle()"><i class="fa fa-bars"></i></button></p>
+    <button mat-button (click)="sidenav.toggle()" class="sidenav-toggle"><i class="fa fa-bars"></i></button>
     <app-city-view></app-city-view>
   </mat-sidenav-content>
 </mat-sidenav-container>
