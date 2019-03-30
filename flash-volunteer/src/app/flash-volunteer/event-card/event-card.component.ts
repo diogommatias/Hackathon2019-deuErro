@@ -41,6 +41,13 @@ export class EventCardComponent implements OnInit {
     return this.event["endDate"];
   }
 
+  get eventDate() {
+    let start: Date = this.eventStartDate;
+    let finish: Date = this.eventEndDate;
+    let date: String = start.getDay + "/" + start.getMonth + " a " + finish.getDay + "/" + finish.getMonth;
+    return date;
+  }
+
   get eventStartTime(){
     return this.event["startTime"];
   }
