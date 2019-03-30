@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CityViewComponent } from './flash-volunteer/city-view/city-view.component';
 import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
 import { EventComponent } from './flash-volunteer/event/event.component'; 
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -40,7 +41,10 @@ import { EventComponent } from './flash-volunteer/event/event.component';
     ReactiveFormsModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
