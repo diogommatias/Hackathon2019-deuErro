@@ -16,14 +16,10 @@ import { MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angul
 import { MatIconModule } from '@angular/material/icon';
 import { CityViewComponent } from './flash-volunteer/city-view/city-view.component';
 import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
-<<<<<<< HEAD
 import { EventComponent } from './flash-volunteer/event/event.component';
 import { SidebarComponent } from './flash-volunteer/sidebar/sidebar.component';
-=======
-import { EventComponent } from './flash-volunteer/event/event.component'; 
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
->>>>>>> 0ad214db0c35a1e69cc9a3aa42a1f31672bbe6ba
 
 
 @NgModule({
