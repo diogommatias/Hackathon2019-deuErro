@@ -1,3 +1,49 @@
-<p>
-  add-event works!
-</p>
+<div class="flex-container-column">
+  <form [formGroup]="form">
+    <div class="spacer">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <input matInput formControlName="category">
+      </mat-form-field>
+    </div>
+    <div class="spacer">
+      <mat-form-field appearance="outline">
+        <mat-label>Institution</mat-label>
+        <input matInput formControlName="institution">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Place</mat-label>
+        <input matInput formControlName="place">
+      </mat-form-field>
+    </div>
+    <div class="spacer">
+      <mat-form-field appearance="outline">
+        <mat-label>Start Date</mat-label>
+        <input matInput [matDatepicker]="startp" formControlName="startDate">
+        <mat-datepicker-toggle matSuffix [for]="startp"></mat-datepicker-toggle>
+        <mat-datepicker #startp></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>End Date</mat-label>
+        <input matInput [matDatepicker]="endp" formControlName="endDate">
+        <mat-datepicker-toggle matSuffix [for]="endp"></mat-datepicker-toggle>
+        <mat-datepicker #endp></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Start Time</mat-label>
+        <input matInput type="time" formControlName="startTime">
+      </mat-form-field>
+    </div>
+    <div class="spacer">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea rows=5 matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+{{form.value | json}}
