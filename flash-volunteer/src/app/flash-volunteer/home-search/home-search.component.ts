@@ -14,8 +14,6 @@ export class HomeSearchComponent implements OnInit {
   homeSearchForm: FormGroup;
   filteredOptions: Observable<any[]>;
 
-  istovaimudar = "ola"
-
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {

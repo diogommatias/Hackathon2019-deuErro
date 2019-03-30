@@ -12,7 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatAutocompleteModule } from '@angular/material/autocomplete'; 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { CityViewComponent } from './flash-volunteer/city-view/city-view.component';
 import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
@@ -40,6 +40,8 @@ import { EventComponent } from './flash-volunteer/event/event.component';
     ReactiveFormsModule,
     MatInputModule,
     BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatIconModule
   ],
   providers: [],

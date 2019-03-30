@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-add-event',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEventComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
+
+  constructor(private f: FormBuilder) { }
 
   ngOnInit() {
+    this.form = this.f.group({
+      name: "",
+      category: "",
+      description: "",
+      institution: "",
+      place: "",
+      startDate: "",
+      endDate: "",
+      startTime: ""
+    })
   }
 
 }
