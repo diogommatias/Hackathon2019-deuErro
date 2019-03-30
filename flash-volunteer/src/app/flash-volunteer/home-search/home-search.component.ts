@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import Cities from '../../data/cities.json'
+import Cities from '../../data/cities.json';
 import { Router } from '@angular/router';
 
 @Component({

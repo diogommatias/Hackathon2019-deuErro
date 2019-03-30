@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
+  events = ["ola", "adeus"];
+
   constructor() { }
 
   ngOnInit() {
