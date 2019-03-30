@@ -7,9 +7,9 @@
       "description": "Animar as crianças nas alas do centro hospitalar de Santa Maria",
       "organization": "Amigo Imaginário",
       "place": "Lisboa",
-      "startDate": "06-04-2019",
-      "endDate": "06-04-2019",
-      "startTime": "10-00"
+      "startDate": "4/6/2019",
+      "endDate": "4/6/2019",
+      "startTime": "10:00"
     },
     {
       "name": "Sopa dos Pobres",
@@ -17,9 +17,9 @@
       "description": "Entrega de roupa e comida aos sem-abrigo",
       "organization": "Vida Tem Abrigo",
       "place": "Lisboa",
-      "startDate": "12-04-2019",
-      "endDate": "12-04-2019",
-      "startTime": "22-00"
+      "startDate": "4/12/2019",
+      "endDate": "4/12/2019",
+      "startTime": "22:00"
     },
     {
       "name": "Limpar Monsanto",
@@ -27,9 +27,9 @@
       "description": "Vem ajudar a limpar Monsanto",
       "organization": "Ajudar os Verdes",
       "place": "Lisboa",
-      "startDate": "20-04-2019",
-      "endDate": "21-04-2019",
-      "startTime": "09-00"
+      "startDate": "4/20/2019",
+      "endDate": "4/21/2019",
+      "startTime": "09:00"
     },
     {
       "name": "Recolha para Moçambique",
@@ -37,8 +37,8 @@
       "description": "Recolha de alimentos e mantimentos para Moçambique",
       "organization": "Ajudantes Remotos",
       "place": "Portugal",
-      "startDate": "21-03-2019",
-      "endDate": "4-04-2019",
+      "startDate": "3/21/2019",
+      "endDate": "4/4/2019",
       "startTime": null
     },
     {
@@ -47,8 +47,8 @@
       "description": "Voluntário no festival do Nos Alive",
       "organization": "Everything is New",
       "place": "Oeiras",
-      "startDate": "13-06-2019",
-      "endDate": "27-06-2019",
+      "startDate": "6/13/2019",
+      "endDate": "6/27/2019",
       "startTime": null
     }
   ]
