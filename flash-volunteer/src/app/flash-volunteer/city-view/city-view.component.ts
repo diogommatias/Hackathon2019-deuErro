@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleMap } from '@agm/core/services/google-maps-types';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -12,8 +11,6 @@ export class CityViewComponent implements OnInit {
 
   private mapToken = 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8';
 
-  a: GoogleMap
-
   latitude: number;
   longitude: number;
   
@@ -25,7 +22,6 @@ export class CityViewComponent implements OnInit {
   ngOnInit() {
     navigator.geolocation.getCurrentPosition((position) => {
       if(position){
-        console.log(position)
         this.latitude = position.coords.latitude;
         this.longitude = position.coords.longitude;
       }
