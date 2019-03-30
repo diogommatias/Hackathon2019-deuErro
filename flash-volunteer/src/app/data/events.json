@@ -1,0 +1,50 @@
+{
+
+  "Events": [
+    {
+      "name": "Alegria no Hospital de São João",
+      "category": "Animar os Hospitais",
+      "description": "Animar as crianças nas alas do centro hospitalar de São João",
+      "instituation": "Amigo Imaginário",
+      "place": "Porto",
+      "initdate": "06-04-2019",
+      "endDate": "06-04-2019",
+      "initTime": "10-00",
+      "endTime": "19-00"
+    },
+    {
+      "name": "Sopa dos Pobres",
+      "category": "Sopa dos Pobres",
+      "description": "Entrega de roupa e comida aos sem-abrigo",
+      "instituation": "Vida Tem Abrigo",
+      "place": "Matosinhos",
+      "initDate": "12-04-2019",
+      "endDate": "12-04-2019",
+      "initTime": "10-00",
+      "endTime": "00-00"
+    },
+    {
+      "name": "Limpar Monsanto",
+      "category": "Limpeza de Matos e Florestas",
+      "description": "Vem ajudar a limpar Monsanto",
+      "instituation": "Ajudar os Verdes",
+      "place": "Lisboa",
+      "initDate": "20-04-2019",
+      "endDate": "21-04-2019",
+      "initTime": "09-00",
+      "endTime": "13-00"
+    },
+    {
+      "name": "Recolha para Moçambique",
+      "category": ["Recolha de Alimentos", "Recolha de Mantimentos"],
+      "description": "Recolha de alimentos e mantimentos para Moçambique",
+      "instituation": "Ajudantes Remotos",
+      "place": "Escolas e Faculdades",
+      "initDate": "21-03-2019",
+      "endDate": "4-04-2019",
+      "initTime": "09-00",
+      "endTime": "16-00"
+    }
+  ]
+  
+}
