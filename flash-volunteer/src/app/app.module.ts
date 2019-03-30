@@ -20,6 +20,7 @@ import { EventComponent } from './flash-volunteer/event/event.component';
 import { SidebarComponent } from './flash-volunteer/sidebar/sidebar.component';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
+import { EventCardComponent } from './flash-volunteer/event-card/event-card.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     CityViewComponent,
     AddEventComponent,
     EventComponent,
-    SidebarComponent
+    SidebarComponent,
+    EventCardComponent
   ],
   imports: [
     BrowserModule,
