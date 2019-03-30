@@ -13,14 +13,20 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material';
-import { MatIconModule } from '@angular/material/icon'; 
+import { MatIconModule } from '@angular/material/icon';
+import { CityViewComponent } from './flash-volunteer/city-view/city-view.component';
+import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
+import { EventComponent } from './flash-volunteer/event/event.component'; 
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HomeSearchComponent
+    HomeSearchComponent,
+    CityViewComponent,
+    AddEventComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
