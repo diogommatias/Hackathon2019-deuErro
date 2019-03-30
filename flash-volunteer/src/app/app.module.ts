@@ -20,10 +20,11 @@ import { EventComponent } from './flash-volunteer/event/event.component';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { EventCardComponent } from './flash-volunteer/event-card/event-card.component';
 import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialog/event-regist-dialog.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     AddEventComponent,
     EventComponent,
     EventCardComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    EventRegistDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,7 @@ import { MatDialogModule } from '@angular/material/dialog';
       apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
     })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [EventRegistDialogComponent]
 })
 export class AppModule { }
