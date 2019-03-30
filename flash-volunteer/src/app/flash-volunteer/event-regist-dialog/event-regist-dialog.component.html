@@ -1,0 +1,20 @@
+<!-- <h1 mat-dialog-title></h1>
+<mat-card>
+  <div mat-dialog-content>
+    <p>Volunteer at {{eventOrganization}}</p>
+    <br>
+    <p>{{eventDescription}}</p>
+  </div>
+</mat-card>
+<mat-dialog-actions>
+  <button mat-button (click)="cancel()">canceled</button>
+  <button mat-button (click)="register()">success</button>
+</mat-dialog-actions> -->
+
+<mat-card>
+  <mat-card-title>{{eventName}}</mat-card-title>
+  <mat-card-actions>
+    <button mat-button (click)="cancel()">canceled</button>
+    <button mat-raised-button color="primary" (click)="register()">success</button>
+  </mat-card-actions>
+</mat-card>

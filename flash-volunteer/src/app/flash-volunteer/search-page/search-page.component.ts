@@ -15,6 +15,9 @@ export class SearchPageComponent implements OnInit {
   ngOnInit() {
     console.log(this.events)
   }
+
+
+
   
 
 }

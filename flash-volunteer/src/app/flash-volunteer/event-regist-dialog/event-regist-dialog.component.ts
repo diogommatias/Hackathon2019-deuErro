@@ -1,31 +1,35 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-import { EventRegistDialogComponent } from '../event-regist-dialog/event-regist-dialog.component';
-import { MatDialog, MatDialogConfig } from '@angular/material';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-event-card',
-  templateUrl: './event-card.component.html',
-  styleUrls: ['./event-card.component.css']
+  selector: 'app-event-regist-dialog',
+  templateUrl: './event-regist-dialog.component.html',
+  styleUrls: ['./event-regist-dialog.component.css']
 })
-export class EventCardComponent implements OnInit {
+export class EventRegistDialogComponent implements OnInit {
 
-  @Input() event: any;
+  event;
 
-  constructor(private dialog: MatDialog) { }
+  constructor(
+    private router: Router,
+    private dialogRef: MatDialogRef<EventRegistDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) data){
+      this.event = data;
+  }
 
   ngOnInit() {
+    console.log(this.event);
   }
 
   register() {
-    const dialogConfig = new MatDialogConfig();
-    
-    dialogConfig.data = this.event;
+    console.log("registado");
+    this.dialogRef.close("success")
+    this.router.navigate([]);
+  }
 
-    const dialogRef = this.dialog.open(EventRegistDialogComponent, dialogConfig);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+  cancel() {
+    this.dialogRef.close("canceled");
   }
 
   get eventName() {
