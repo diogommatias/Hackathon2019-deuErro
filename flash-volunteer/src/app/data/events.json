@@ -7,19 +7,23 @@
       "description": "Animar as crianças nas alas do centro hospitalar de Santa Maria",
       "organization": "Amigo Imaginário",
       "place": "Lisboa",
+      "location": "Av. Prof. Egas Moniz s/n, 1649-035 Lisboa",
       "startDate": "4/6/2019",
       "endDate": "4/6/2019",
-      "startTime": "10:00"
+      "startTime": "10:00",
+      "status": "next"
     },
     {
-      "name": "Sopa dos Pobres",
+      "name": "Sopa para os Pobres",
       "category": "Humanitário",
       "description": "Entrega de roupa e comida aos sem-abrigo",
       "organization": "Vida Tem Abrigo",
       "place": "Lisboa",
+      "location": "Largo dos Caminhos de Ferro, 1100-395 Lisboa",
       "startDate": "4/12/2019",
       "endDate": "4/12/2019",
-      "startTime": "22:00"
+      "startTime": "22:00",
+      "status": "next"
     },
     {
       "name": "Limpar Monsanto",
@@ -27,29 +31,83 @@
       "description": "Vem ajudar a limpar Monsanto",
       "organization": "Ajudar os Verdes",
       "place": "Lisboa",
+      "location": "Parque Florestal de Monsanto",
       "startDate": "4/20/2019",
       "endDate": "4/21/2019",
-      "startTime": "09:00"
+      "startTime": "9:00",
+      "status": "next"
     },
     {
       "name": "Recolha para Moçambique",
       "category": "Emergência",
       "description": "Recolha de alimentos e mantimentos para Moçambique",
       "organization": "Ajudantes Remotos",
-      "place": "Portugal",
+      "place": "Lisboa",
+      "location": "Jardim 9 de Abril 1 a 5, 1249-083 Lisboa",
       "startDate": "3/21/2019",
       "endDate": "4/4/2019",
-      "startTime": null
+      "startTime": null,
+      "status": "in progress"
     },
     {
       "name": "Voluntário Nos Alive",
       "category": "Cultural",
       "description": "Voluntário no festival do Nos Alive",
-      "organization": "Everything is New",
+      "organization": "É Tudo Novo",
       "place": "Oeiras",
-      "startDate": "6/13/2019",
-      "endDate": "6/27/2019",
-      "startTime": null
+      "location": "Passeio Marítimo de Algés, 1495-165 Algés",
+      "startDate": "6/11/2019",
+      "endDate": "6/13/2019",
+      "startTime": "14:00",
+      "status": "next"
+    },
+    {
+      "name": "Recolha para Moçambique",
+      "category": "Emergência",
+      "description": "Recolha de alimentos e mantimentos para Moçambique",
+      "organization": "Somos Amigos",
+      "place": "Portugal",
+      "location": "Praça da Estrela, 1200-667 Lisboa",
+      "startDate": "3/19/2019",
+      "endDate": "4/2/2019",
+      "startTime": null,
+      "status": "in progress"
+    },
+    {
+      "name": "Chamar à Atenção para os Plásticos",
+      "category": "Cultural",
+      "description": "Dar a conhecer à população o que o uso excessivo dos plásticos tem de impacto na nossa sociedade",
+      "organization": "Somos Amigos",
+      "place": "Lisboa",
+      "location": "Av. Infante Dom Henrique 1, 1100-016 Lisboa",
+      "startDate": "3/16/2019",
+      "endDate": "3/17/2019",
+      "startTime": "15:00",
+      "status": "done"
+    },
+    {
+      "name": "Limpar Grafitos",
+      "category": "Conservação",
+      "description": "Remover os grafitos na área circundante do Terminal Rodoviário de Algés",
+      "organization": "Somos Amigos",
+      "place": "Oeiras",
+      "location": "043, R. Damião de Góis 30, 1495-043 Algés",
+      "startDate": "4/13/2019",
+      "endDate": "4/13/2019",
+      "startTime": "9:00",
+      "status": "next"
+    },
+    {
+      "name": "Limpar o Parque Vale do Silêncio",
+      "category": "Conservação",
+      "description": "Voluntário no festival do Nos Alive",
+      "organization": "Somos Amigos",
+      "place": "Oeiras",
+      "location": "R. Cidade de Negage 193, Lisboa",
+      "startDate": "2/2/2019",
+      "endDate": "2/2/2019",
+      "startTime": "9:00",
+      "status": "done"
     }
   ]
 

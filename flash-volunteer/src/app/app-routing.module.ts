@@ -4,6 +4,7 @@ import { HomeComponent } from './flash-volunteer/home/home.component';
 import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
 import { AddEventComponent } from './flash-volunteer/add-event/add-event.component';
 import { EventComponent } from './flash-volunteer/event/event.component';
+import { OrganizationPageComponent } from './flash-volunteer/organization-page/organization-page.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'events/:event',
     component: EventComponent
+  },
+  {
+    path: 'organization',
+    component: OrganizationPageComponent
   }
 ];
 
