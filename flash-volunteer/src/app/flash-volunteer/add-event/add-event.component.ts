@@ -42,4 +42,8 @@ export class AddEventComponent implements OnInit {
     this.es.addEvents(this.form.value);
     this.router.navigate(['/cities/', this.form.value.place]);
   }
+
+  cancel() {
+    this.router.navigate(['']);
+  }
 }
