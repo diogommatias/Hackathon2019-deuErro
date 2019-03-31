@@ -20,6 +20,6 @@
 
   <mat-sidenav-content>
     <button mat-button (click)="sidenav.toggle()" class="sidenav-toggle"><i class="fa fa-bars"></i></button>
-    <app-city-view></app-city-view>
+    <app-city-view [events]="cityEvents"></app-city-view>
   </mat-sidenav-content>
 </mat-sidenav-container>
