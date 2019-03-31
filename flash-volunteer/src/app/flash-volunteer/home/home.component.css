@@ -35,8 +35,6 @@ mat-toolbar {
   justify-content: center;
 }
 
-
-
 app-home-search {
   padding-top: 60px;
   width: auto;
