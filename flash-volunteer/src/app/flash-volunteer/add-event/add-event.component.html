@@ -1,64 +1,67 @@
-<mat-card class="home-search">
-  <mat-card-title class="home-search-text">Add Event</mat-card-title>
-  <div class="flex-container-column">
-    <form [formGroup]="form">
-      <div class="spacer">
-        <mat-form-field appearance="outline">
-          <mat-label>Name</mat-label>
-          <input matInput formControlName="name" required>
-        </mat-form-field>
+<div class="container" color="primary">
+  <mat-card class="home-search">
+    <mat-card-title class="home-search-text">Add Event</mat-card-title>
+    <div class="flex-container-column">
+      <form [formGroup]="form">
+        <div class="spacer">
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" required>
+          </mat-form-field>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Category</mat-label>
-          <mat-select formControlName="category" required>
-            <mat-option>--</mat-option>
-            <mat-option *ngFor="let cat of categories" [value]="cat">
-              {{cat}}
-            </mat-option>
-          </mat-select>
-          <mat-error *ngIf="category.hasError('required')">Please choose a category</mat-error>
-        </mat-form-field>
-      </div>
+          <mat-form-field appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category" required>
+              <mat-option>--</mat-option>
+              <mat-option *ngFor="let cat of categories" [value]="cat">
+                {{cat}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="category.hasError('required')">Please choose a category</mat-error>
+          </mat-form-field>
+        </div>
 
-      <div class="spacer">
-        <mat-form-field appearance="outline">
-          <mat-label>Organization</mat-label>
-          <input matInput formControlName="organization" required>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Place</mat-label>
-          <input matInput formControlName="place" required>
-        </mat-form-field>
-      </div>
+        <div class="spacer">
+          <mat-form-field appearance="outline">
+            <mat-label>Organization</mat-label>
+            <input matInput formControlName="organization" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Place</mat-label>
+            <input matInput formControlName="place" required>
+          </mat-form-field>
+        </div>
 
-      <div class="spacer">
-        <mat-form-field appearance="outline">
-          <mat-label>Start Date</mat-label>
-          <input matInput [matDatepicker]="startp" formControlName="startDate" required>
-          <mat-datepicker-toggle matSuffix [for]="startp"></mat-datepicker-toggle>
-          <mat-datepicker #startp></mat-datepicker>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>End Date</mat-label>
-          <input matInput [matDatepicker]="endp" formControlName="endDate" required>
-          <mat-datepicker-toggle matSuffix [for]="endp"></mat-datepicker-toggle>
-          <mat-datepicker #endp></mat-datepicker>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Start Time</mat-label>
-          <input matInput type="time" formControlName="startTime" required>
-        </mat-form-field>
-      </div>
+        <div class="spacer">
+          <mat-form-field appearance="outline">
+            <mat-label>Start Date</mat-label>
+            <input matInput [matDatepicker]="startp" formControlName="startDate" required>
+            <mat-datepicker-toggle matSuffix [for]="startp"></mat-datepicker-toggle>
+            <mat-datepicker #startp></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>End Date</mat-label>
+            <input matInput [matDatepicker]="endp" formControlName="endDate" required>
+            <mat-datepicker-toggle matSuffix [for]="endp"></mat-datepicker-toggle>
+            <mat-datepicker #endp></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Start Time</mat-label>
+            <input matInput type="time" formControlName="startTime" required>
+          </mat-form-field>
+        </div>
 
-      <div class="spacer">
-        <mat-form-field appearance="outline">
-          <mat-label>Description</mat-label>
-          <textarea rows=5 matInput formControlName="description" required></textarea>
-        </mat-form-field>
-      </div>
-      <div class="spacer">
-        <button mat-flat-button color="warn" (click)="cancel()">Cancel</button>
-        <button mat-flat-button color="primary" (click)="submit()">Submit</button>
-      </div>
-    </form>
-  </div>
+        <div class="spacer">
+          <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea rows=5 matInput formControlName="description" required></textarea>
+          </mat-form-field>
+        </div>
+        <div class="spacer">
+          <button mat-flat-button color="warn" (click)="cancel()">Cancel</button>
+          <button mat-flat-button color="primary" (click)="submit()">Submit</button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>
