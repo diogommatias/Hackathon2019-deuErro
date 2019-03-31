@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import Organization from '../../data/organizations.json';
 import Events from '../../data/events.json';
+import { forEach } from '@angular/router/src/utils/collection';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-organization-page',
@@ -9,19 +11,32 @@ import Events from '../../data/events.json';
 })
 export class OrganizationPageComponent implements OnInit {
 
+  currentOrg: any;
+
+  orgs = Organization.Organizations;
   events = Events.Events;
-  org: any;
+  
+  sortedEvents = new Array();
 
   constructor() { }
 
   ngOnInit() {
-    let index: number = Math.floor(Math.random() * (Organization.Organizations.length - 0 + 1)) + 0;
-    this.org = Organization.Organizations[index];
+    this.currentOrg = this.orgs[5];
+    
+    this.sortEvents();
   }
 
-  organizationName() {
-    return this.org.name;
+  sortEvents(){
+    this.events.forEach((event) =>{
+      
+      if(event.organization === this.currentOrg.name){
+        this.sortedEvents.push(event);
+        console.log(this.sortedEvents)
+      }
+    });
   }
+
+  s
 
 
 }
