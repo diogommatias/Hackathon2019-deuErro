@@ -30,3 +30,7 @@ mat-sidenav {
 app-city-view {
   z-index: 1;
 }
+
+#flash_volunteer_logo {
+  height: 70%;
+}
