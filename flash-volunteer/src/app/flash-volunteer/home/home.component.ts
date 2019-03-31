@@ -6,17 +6,16 @@ import { EventService } from 'src/app/event.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  imgUrl;
+  imgUrl = '../../../assets/img/default.jpg';
 
   flash_volunteer_logo = "../../../assets/img/logo.svg"
 
   constructor(private router: Router, private es: EventService) { }
 
   ngOnInit() {
-    
     this.es.setEvents();
   }
 
@@ -27,14 +26,13 @@ export class HomeComponent implements OnInit {
   tets(s: string) {
     function FindImgByName(task) {
 
-        if (task.name === this[0]) {
-            return task;
-        }
+      if (task.name === this[0]) {
+        return task;
+      }
     }
     try {
       var img = Cities.Cities.find(FindImgByName, [s]).img;
       this.imgUrl = '../../../assets/img/' + img;
-      document.getElementById("home").style.backgroundImage = "url('"+this.imgUrl+"')";
     } catch (e) {
       console.log("lolada");
     }
