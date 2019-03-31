@@ -34,7 +34,6 @@ export class HomeSearchComponent implements OnInit {
       );
     this.cityName.valueChanges.subscribe((value)=>{
       this.out.emit(value)
-
     })
   }
 
