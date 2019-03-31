@@ -13,11 +13,11 @@ export class CityViewComponent implements OnInit {
 
   private _events = new Array();
 
+  city: string;
+
   @Input() set events(value: Array<any>) {
     this._events = value;
     this.loadMarkers();
-
-    this.setCityCenter();
   }
 
   get events() {
@@ -34,12 +34,19 @@ export class CityViewComponent implements OnInit {
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    navigator.geolocation.getCurrentPosition((position) => {
-      if (position) {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-      }
-    })
+    this.city = this.route.snapshot.paramMap.get("city");
+
+    if (this.city === "all") {
+      navigator.geolocation.getCurrentPosition((position) => {
+        if (position) {
+          this.latitude = position.coords.latitude;
+          this.longitude = position.coords.longitude;
+        }
+      })
+    } else {
+      this.setCityCenter();
+    }
+
   }
 
   loadMarkers() {
@@ -70,13 +77,11 @@ export class CityViewComponent implements OnInit {
   }
 
   setCityCenter() {
-    let city = this.route.snapshot.paramMap.get("city");
-    console.log(city)
-    this.getGeoLocation(city).subscribe(res => {
+    
+    this.getGeoLocation(this.city).subscribe(res => {
 
       if (res["status"] === "OK") {
         let location = res["results"][0].geometry.location;
-        console.log(location)
         this.latitude = location.lat;
         this.longitude = location.lng;
       }
