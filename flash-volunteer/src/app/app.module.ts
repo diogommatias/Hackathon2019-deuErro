@@ -24,6 +24,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { EventCardComponent } from './flash-volunteer/event-card/event-card.component';
 import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { OrganizationPageComponent } from './flash-volunteer/organization-page/organization-page.component';
+import { MatTabsModule } from '@angular/material/tabs';
 import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialog/event-regist-dialog.component';
 
 @NgModule({
@@ -36,6 +38,7 @@ import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialo
     EventComponent,
     EventCardComponent,
     SearchPageComponent,
+    OrganizationPageComponent,
     EventRegistDialogComponent
   ],
   imports: [
@@ -57,6 +60,7 @@ import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialo
     MatIconModule,
     MatSelectModule,
     MatDialogModule,
+    MatTabsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
     })
