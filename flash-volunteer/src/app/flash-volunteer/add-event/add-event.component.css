@@ -5,6 +5,7 @@ div.container {
     height: 100vh;
 
     background-image: url(../../../assets/img/default.jpg);
+    background-size: cover;
 }
 
 div.spacer {
