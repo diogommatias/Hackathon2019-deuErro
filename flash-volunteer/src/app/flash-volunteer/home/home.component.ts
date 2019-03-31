@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { EventService } from 'src/app/event.service';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +12,10 @@ export class HomeComponent implements OnInit {
   flash_volunteer_logo = "../../../assets/img/logo.svg"
   banner_background_image = ""
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private es: EventService) { }
 
   ngOnInit() {
+    this.es.setEvents();
   }
 
   go(s){
