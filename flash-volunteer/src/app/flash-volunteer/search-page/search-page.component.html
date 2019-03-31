@@ -4,14 +4,16 @@
       <img id="flash_volunteer_logo" src={{flash_volunteer_logo}}>
     </mat-toolbar>
     <div class="select-category">
-      <mat-form-field>
-        <mat-label>Category</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let category of categories" [value]="category">
-            {{category}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+      <form [formGroup]="categoryForm">
+        <mat-form-field>
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="category" (selectionChange)="sortByCategory()">
+            <mat-option *ngFor="let category of categories" [value]="category">
+              {{category}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
     </div>
 
 
