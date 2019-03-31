@@ -1,7 +1,7 @@
 <div class="upper-page">
   <div class="greetings">
     <p>
-      Olá , o que vamos fazer amanhã?
+      Olá {{organizationName()}}, o que vamos fazer amanhã?
     </p>
   </div>
 </div>
@@ -10,13 +10,13 @@
     <p>Eventos:</p>
     <mat-tab-group>
       <mat-tab label="Em progresso">
-        <app-event-card *ngFor="let e of sortedEvents" [event]="e"> </app-event-card>
+        <app-event-card *ngFor="let e of sortedEventsInProgress" [event]="e"> </app-event-card>
       </mat-tab>
       <mat-tab label="Próximos">
-        <app-event-card *ngFor="let e of sortedEvents" [event]="e"> </app-event-card>
+        <app-event-card *ngFor="let e of sortedEventsNew" [event]="e"> </app-event-card>
       </mat-tab>
       <mat-tab label="Histórico">
-        <app-event-card *ngFor="let e of events" [event]="e"> </app-event-card>
+        <app-event-card *ngFor="let e of sortedEventsDone" [event]="e"> </app-event-card>
       </mat-tab>
     </mat-tab-group>
   </div>

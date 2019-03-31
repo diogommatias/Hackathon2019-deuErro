@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Organization from '../../data/organizations.json';
 import Events from '../../data/events.json';
-import { forEach } from '@angular/router/src/utils/collection';
-import { of } from 'rxjs';
 
 @Component({
   selector: 'app-organization-page',
@@ -16,7 +14,9 @@ export class OrganizationPageComponent implements OnInit {
   orgs = Organization.Organizations;
   events = Events.Events;
   
-  sortedEvents = new Array();
+  sortedEventsInProgress = new Array();
+  sortedEventsNew = new Array();
+  sortedEventsDone = new Array();
 
   constructor() { }
 
@@ -26,12 +26,22 @@ export class OrganizationPageComponent implements OnInit {
     this.sortEvents();
   }
 
+  organizationName() {
+    return this.currentOrg.name;
+  }
+
   sortEvents(){
     this.events.forEach((event) =>{
-      
       if(event.organization === this.currentOrg.name){
-        this.sortedEvents.push(event);
-        console.log(this.sortedEvents)
+        if(event.status === "in progress") {
+          this.sortedEventsInProgress.push(event);
+        }else 
+        if(event.status === "next") {
+          this.sortedEventsNew.push(event);
+        }else
+        if(event.status === "done") {
+          this.sortedEventsDone.push(event);
+        }
       }
     });
   }
