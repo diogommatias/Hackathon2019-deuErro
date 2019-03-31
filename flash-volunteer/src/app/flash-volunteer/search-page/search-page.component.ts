@@ -26,39 +26,40 @@ export class SearchPageComponent implements OnInit {
 
   ngOnInit() {
     this.cityName = this.route.snapshot.paramMap.get("city");
-    if(this.cityName === "all"){
-      this.cityEvents = this.events;
-    } else {
-      this.sortByCity();
-    }
+    this.sortByCity();
 
     this.categoryForm = this.fb.group({
       category: [""]
-    })    
-  }
-
-  get CurrentCategory(): FormControl{
-    return this.categoryForm.get("category") as FormControl;
-  }
-
-  sortByCity(){
-    this.cityEvents = new Array();
-    this.events.forEach((event)=>{
-      if(event.place === this.cityName){
-        this.cityEvents.push(event);
-      }
     })
   }
 
-  sortByCategory(){
+  get CurrentCategory(): FormControl {
+    return this.categoryForm.get("category") as FormControl;
+  }
+
+  sortByCity() {
+    this.cityEvents = new Array();
+    if (this.cityName === "all") {
+      this.cityEvents = this.events;
+    } else {
+      this.events.forEach((event) => {
+        if (event.place === this.cityName) {
+          this.cityEvents.push(event);
+        }
+      })
+    }
+
+  }
+
+  sortByCategory() {
     let currentCategory = this.CurrentCategory.value;
     console.log(currentCategory)
     this.sortByCity();
 
-    if(currentCategory !== ""){
+    if (currentCategory !== "") {
       let sortedEvents = new Array();
-      this.cityEvents.forEach(event =>{
-        if(event.category === currentCategory){
+      this.cityEvents.forEach(event => {
+        if (event.category === currentCategory) {
           sortedEvents.push(event);
         }
       })
