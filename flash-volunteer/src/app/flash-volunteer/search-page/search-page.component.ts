@@ -21,7 +21,12 @@ export class SearchPageComponent implements OnInit {
 
   ngOnInit() {
     this.cityName = this.route.snapshot.paramMap.get("city");
-    this.sortByCity();
+    if(this.cityName === "all"){
+      this.cityEvents = this.events;
+    } else {
+      this.sortByCity();
+    }
+    
   }
 
   sortByCity(){
