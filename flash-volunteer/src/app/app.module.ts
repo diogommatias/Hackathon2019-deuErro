@@ -27,6 +27,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { OrganizationPageComponent } from './flash-volunteer/organization-page/organization-page.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialog/event-regist-dialog.component';
+import { PrizesComponent } from './flash-volunteer/prizes/prizes.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list'; 
+import { MatDividerModule } from '@angular/material/divider'; 
 
 @NgModule({
   declarations: [
@@ -38,6 +42,8 @@ import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialo
     EventComponent,
     EventCardComponent,
     SearchPageComponent,
+    EventRegistDialogComponent,
+    PrizesComponent,
     OrganizationPageComponent,
     EventRegistDialogComponent
   ],
@@ -60,6 +66,9 @@ import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialo
     MatIconModule,
     MatSelectModule,
     MatDialogModule,
+    MatGridListModule,
+    MatListModule,
+    MatDividerModule,
     MatTabsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'

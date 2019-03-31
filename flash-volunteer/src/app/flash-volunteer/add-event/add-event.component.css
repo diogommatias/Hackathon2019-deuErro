@@ -11,7 +11,8 @@ div.spacer {
 }
 
 .mat-flat-button {
-    width: 100%;
+    flex-grow: 1;
+    margin: 2pt;
 }
 
 .mat-card-title {

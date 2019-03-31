@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventService } from 'src/app/event.service';
 
@@ -8,18 +8,23 @@ import { EventService } from 'src/app/event.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
+  flash_volunteer_logo = "../../../assets/img/logo.svg";
+  banner_background_image = "";
 
-  flash_volunteer_logo = "../../../assets/img/logo.svg"
-  banner_background_image = ""
 
   constructor(private router: Router, private es: EventService) { }
 
   ngOnInit() {
+    
     this.es.setEvents();
   }
 
   go(s){
     this.router.navigate([s]); 
   }
+
+
+
 
 }
