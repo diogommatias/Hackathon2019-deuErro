@@ -1,27 +1,25 @@
 <div class="upper-page">
-  <div class="greetings">
-    <p>
-      Olá {{organizationName()}}, o que vamos fazer amanhã?
-    </p>
-  </div>
+  <mat-toolbar class="greetings" color="primary">
+    <span>Hello {{organizationName()}}, what are we gonna do tomorrow?</span>
+    <div class="buttons">
+      <button mat-raised-button>Edit Profile</button>
+      <button mat-raised-button (click)="createEvent()">Create Event</button>
+    </div>
+  </mat-toolbar>
 </div>
 <div class="main-page">
   <div class="events">
-    <p>Eventos:</p>
     <mat-tab-group>
-      <mat-tab label="Em progresso">
-        <app-event-card-organization *ngFor="let e of sortedEventsInProgress" [event]="e"> </app-event-card-organization>
+      <mat-tab label="In Progress">
+        <app-event-card-organization *ngFor="let e of sortedEventsInProgress" [event]="e">
+        </app-event-card-organization>
       </mat-tab>
-      <mat-tab label="Próximos">
+      <mat-tab label="Next">
         <app-event-card-organization *ngFor="let e of sortedEventsNew" [event]="e"> </app-event-card-organization>
       </mat-tab>
-      <mat-tab label="Histórico">
+      <mat-tab label="Done">
         <app-event-card-organization *ngFor="let e of sortedEventsDone" [event]="e"> </app-event-card-organization>
       </mat-tab>
     </mat-tab-group>
-  </div>
-  <div class="actions">
-    <button mat-stroked-button>Editar perfil</button>
-    <button mat-stroked-button>Criar evento</button>
   </div>
 </div>
