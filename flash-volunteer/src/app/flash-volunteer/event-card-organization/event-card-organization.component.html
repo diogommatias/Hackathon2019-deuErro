@@ -11,7 +11,7 @@
       <div>
         <p> Start date: {{eventStartDate | date}} </p>
         <p> End date: {{eventEndDate | date}} </p>
-        <p> Start time: {{eventStartTime}} </p>
+        <p *ngIf="event.startTime !== null"> Start time: {{eventStartTime}} </p>
       </div>
     </mat-card-content>
   </mat-card>
