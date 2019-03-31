@@ -1,4 +1,4 @@
-<div ng-style="myStyle" id="home">
+<div id="home">
   <mat-toolbar>
     <img id="flash_volunteer_logo" src={{flash_volunteer_logo}}>
     <span class="spacer"></span>
@@ -7,7 +7,7 @@
     <button mat-button (click)="go('add')">Collaborate with us!</button>
   </mat-toolbar>
   <div id="banner">
-    <app-home-search></app-home-search>
+    <app-home-search (out)="tets($event)"></app-home-search>
     <div id="more">
       <i class='fa fa-angle-down' style='font-size:36px'></i>
     </div>

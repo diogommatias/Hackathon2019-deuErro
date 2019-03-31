@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable,  } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import Cities from '../../data/cities.json';
 import Phrases from '../../data/promptPhrases.json';
@@ -12,9 +12,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-search.component.css']
 })
 export class HomeSearchComponent implements OnInit {
+  @Output() out = new EventEmitter();
 
   prompt_phrase = Phrases.Phrases[Math.floor(Math.random() * (Phrases.Phrases.length))];
-    
+
   homeSearchForm: FormGroup;
   filteredOptions: Observable<any[]>;
 
@@ -31,6 +32,10 @@ export class HomeSearchComponent implements OnInit {
         startWith(''),
         map(value => this._filter(value))
       );
+    this.cityName.valueChanges.subscribe((value)=>{
+      this.out.emit(value)
+
+    })
   }
 
   private _filter(value: string) {
@@ -50,5 +55,4 @@ export class HomeSearchComponent implements OnInit {
   go(){
     this.router.navigate(['/cities/', this.cityName.value]);
   }
-
 }
