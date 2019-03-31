@@ -24,6 +24,7 @@ mat-sidenav {
 }
 
 .select-category{
+  display: flex;
   justify-content: center;
 }
 
@@ -31,6 +32,16 @@ app-city-view {
   z-index: 1;
 }
 
+.logo-button{
+  height: 100%;
+}
+
+.center-toolbar{
+  justify-content: center;
+}
+
 #flash_volunteer_logo {
   height: 70%;
 }
+
+

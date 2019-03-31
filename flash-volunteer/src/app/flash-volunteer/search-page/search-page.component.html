@@ -1,7 +1,10 @@
 <mat-sidenav-container class="container-event-view">
   <mat-sidenav #sidenav opened mode="side" position="start">
-    <mat-toolbar>
-      <img id="flash_volunteer_logo" src={{flash_volunteer_logo}}>
+    <mat-toolbar class="center-toolbar">
+      <button mat-button class="logo-button" routerLink="../../">
+        <img id="flash_volunteer_logo" src={{flash_volunteer_logo}}>
+      </button>
+      
     </mat-toolbar>
     <div class="select-category">
       <form [formGroup]="categoryForm">
