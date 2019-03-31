@@ -15,6 +15,8 @@ export class SearchPageComponent implements OnInit {
   cityName: string;
   currentCategory: string;
 
+  flash_volunteer_logo = "../../../assets/img/logo.svg"
+
   categories = ["Humanitary", "Emergency", "Conservation", "Cultural"];
 
   constructor(private route: ActivatedRoute) { }
