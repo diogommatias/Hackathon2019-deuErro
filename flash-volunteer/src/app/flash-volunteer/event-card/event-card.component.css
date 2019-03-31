@@ -3,6 +3,36 @@
   background-size: cover;
 }
 
+.avatar-ajudantes-remotos {
+  background-image: url('https://banner2.kisspng.com/20180319/qbq/kisspng-web-development-world-wide-web-computer-icons-webs-world-wide-web-icon-png-5ab05c23af4479.0595655515215073637179.jpg');
+  background-size: cover;
+}
+
+.avatar-ajudar-verdes {
+  background-image: url('https://cdn3.iconfinder.com/data/icons/flat-icons-web/40/Tree_Alt-512.png');
+  background-size: cover;
+}
+
+.avatar-amigo-imaginario {
+  background-image: url('https://cdn0.iconfinder.com/data/icons/positive-character-traits-alphabet-f/282/positive-f014-512.png');
+  background-size: cover;
+}
+
+.avatar-vida-abrigo {
+  background-image: url('https://static.thenounproject.com/png/6443-200.png');
+  background-size: cover;
+}
+
+.avatar-tudo-novo {
+  background-image: url('https://cdn0.iconfinder.com/data/icons/interface-set-vol-2/50/Menu_Options-2-512.png');
+  background-size: cover;
+}
+
+.avatar-somos-amigos {
+  background-image: url('https://static.thenounproject.com/png/172436-200.png');
+  background-size: cover;
+}
+
 .register-button {
   display: flex;
   align-self: flex-end;
