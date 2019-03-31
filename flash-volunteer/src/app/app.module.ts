@@ -24,6 +24,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { EventCardComponent } from './flash-volunteer/event-card/event-card.component';
 import { SearchPageComponent } from './flash-volunteer/search-page/search-page.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { OrganizationPageComponent } from './flash-volunteer/organization-page/organization-page.component';
+import { MatTabsModule } from '@angular/material/tabs';
 import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialog/event-regist-dialog.component';
 import { PrizesComponent } from './flash-volunteer/prizes/prizes.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -41,7 +43,9 @@ import { MatDividerModule } from '@angular/material/divider';
     EventCardComponent,
     SearchPageComponent,
     EventRegistDialogComponent,
-    PrizesComponent
+    PrizesComponent,
+    OrganizationPageComponent,
+    EventRegistDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +69,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatGridListModule,
     MatListModule,
     MatDividerModule,
+    MatTabsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
     })

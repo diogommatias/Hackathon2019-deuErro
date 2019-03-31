@@ -1,0 +1,27 @@
+<div class="upper-page">
+  <div class="greetings">
+    <p>
+      Olá {{organizationName()}}, o que vamos fazer amanhã?
+    </p>
+  </div>
+</div>
+<div class="main-page">
+  <div class="events">
+    <p>Eventos:</p>
+    <mat-tab-group>
+      <mat-tab label="Em progresso">
+        <app-event-card *ngFor="let e of events" [event]="e"> </app-event-card>
+      </mat-tab>
+      <mat-tab label="Próximos">
+        <app-event-card *ngFor="let e of events" [event]="e"> </app-event-card>
+      </mat-tab>
+      <mat-tab label="Histórico">
+        <app-event-card *ngFor="let e of events" [event]="e"> </app-event-card>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  <div class="actions">
+    <button mat-button>Editar perfil</button>
+    <button mat-button>Criar evento</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.upper-page {
+  display: flex;
+  justify-content: center;
+}
+
+.greetings {
+  text-align: left;
+  border-bottom: 2px solid rgb(0,0,0);
+  width: 90%;
+}
+
+.main-page {
+  display: flex;
+  justify-content: center;
+}
+
+.events {
+  width: 70%
+}
+
+.actions {
+  width: 20%
+}
