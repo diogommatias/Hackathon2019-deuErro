@@ -44,6 +44,6 @@ export class AddEventComponent implements OnInit {
   }
 
   cancel() {
-    this.router.navigate(['']);
+    this.router.navigate(['organization']);
   }
 }

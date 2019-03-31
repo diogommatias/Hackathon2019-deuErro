@@ -51,7 +51,12 @@ export class HomeSearchComponent implements OnInit {
     return city["name"];
   }
 
+  near(s){
+    this.router.navigate(['/cities/', s]);
+  }
+
   go(){
     this.router.navigate(['/cities/', this.cityName.value]);
   }
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Organization from '../../data/organizations.json';
 import Events from '../../data/events.json';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-organization-page',
@@ -18,7 +19,7 @@ export class OrganizationPageComponent implements OnInit {
   sortedEventsNew = new Array();
   sortedEventsDone = new Array();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.currentOrg = this.orgs[5];
@@ -46,7 +47,9 @@ export class OrganizationPageComponent implements OnInit {
     });
   }
 
-  s
+  createEvent() {
+    this.router.navigate(['/add/']);
+  }
 
 
 }

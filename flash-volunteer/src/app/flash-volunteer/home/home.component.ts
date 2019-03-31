@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   go(s){
-    this.router.navigate([s]); 
+    this.router.navigate([s]);
   }
 
   tets(s: string) {
