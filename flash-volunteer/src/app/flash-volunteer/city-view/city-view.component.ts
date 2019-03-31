@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -15,9 +16,11 @@ export class CityViewComponent implements OnInit {
   @Input() set events(value: Array<any>) {
     this._events = value;
     this.loadMarkers();
-  } 
 
-  get events(){
+    this.setCityCenter();
+  }
+
+  get events() {
     return this._events;
   }
 
@@ -26,10 +29,9 @@ export class CityViewComponent implements OnInit {
   latitude: number;
   longitude: number;
 
-
   markers: marker[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -38,16 +40,15 @@ export class CityViewComponent implements OnInit {
         this.longitude = position.coords.longitude;
       }
     })
-
   }
 
   loadMarkers() {
     this.events.forEach(event => {
       this.getGeoLocation(event.location).subscribe(
         (res) => {
-          if(res["status"]==="OK"){
+          if (res["status"] === "OK") {
             let location = res["results"][0].geometry.location;
-            this.addMarker(location.lat, location.lng, false);
+            this.addMarker(location.lat, location.lng, false, event.name);
           }
         }
       )
@@ -66,6 +67,20 @@ export class CityViewComponent implements OnInit {
 
   pickLocation($event) {
     console.log($event)
+  }
+
+  setCityCenter() {
+    let city = this.route.snapshot.paramMap.get("city");
+    console.log(city)
+    this.getGeoLocation(city).subscribe(res => {
+
+      if (res["status"] === "OK") {
+        let location = res["results"][0].geometry.location;
+        console.log(location)
+        this.latitude = location.lat;
+        this.longitude = location.lng;
+      }
+    })
   }
 
   getGeoLocation(address): Observable<any> {
