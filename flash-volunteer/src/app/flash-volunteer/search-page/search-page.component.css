@@ -1,28 +1,32 @@
 .container-event-view {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  mat-sidenav {
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 30%;
-  }
-  
-  .example-avatar {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5b/Avatar_leaf.png');
-    background-size: cover;
-  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
-  .sidenav-toggle {
-    position: absolute;
-    z-index: 2;
-  }
+mat-sidenav {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 30%;
+}
 
-  app-city-view {
-    z-index: 1;
-  }
+.example-avatar {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5b/Avatar_leaf.png');
+  background-size: cover;
+}
+
+.sidenav-toggle {
+  position: absolute;
+  z-index: 2;
+}
+
+.select-category{
+  justify-content: center;
+}
+
+app-city-view {
+  z-index: 1;
+}

@@ -32,6 +32,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list'; 
 import { MatDividerModule } from '@angular/material/divider';
 import { EventCardOrganizationComponent } from './flash-volunteer/event-card-organization/event-card-organization.component'; 
+import { MatButtonToggleModule } from '@angular/material/button-toggle'; 
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { EventCardOrganizationComponent } from './flash-volunteer/event-card-org
     MatListModule,
     MatDividerModule,
     MatTabsModule,
+    MatButtonToggleModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
     })
