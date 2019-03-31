@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { EventService } from 'src/app/event.service';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +13,11 @@ export class HomeComponent implements OnInit {
   banner_background_image = "";
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private es: EventService) { }
 
   ngOnInit() {
     
+    this.es.setEvents();
   }
 
   go(s){
