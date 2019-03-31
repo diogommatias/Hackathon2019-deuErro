@@ -8,11 +8,11 @@ export class EventService {
 
   events;
 
-  constructor() {  }
+  constructor() { }
 
   setEvents() {
-    this.events = Events.Events
-    console.log(this.events);
+    if (this.events == null)
+      this.events = Events.Events
   }
 
   getEvents() {
@@ -20,7 +20,7 @@ export class EventService {
   }
 
   addEvents(e) {
-    if (this.events == null) this.setEvents();
+    this.setEvents();
     this.events.push(e);
   }
 
