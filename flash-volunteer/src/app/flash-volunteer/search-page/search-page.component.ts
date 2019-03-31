@@ -13,14 +13,14 @@ export class SearchPageComponent implements OnInit {
   cityEvents = new Array();
 
   cityName: string;
+  currentCategory: string;
+
+  categories = ["Humanitary", "Emergency", "Conservation", "Cultural"];
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.cityName = this.route.snapshot.paramMap.get("city");
-    console.log(this.cityName)
-    console.log(this.events)
-
     this.sortByCity();
   }
 
@@ -30,13 +30,6 @@ export class SearchPageComponent implements OnInit {
         this.cityEvents.push(event);
       }
     })
-
-    console.log(this.cityEvents);
   }
-
-
-
-
-  
 
 }

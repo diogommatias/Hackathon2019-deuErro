@@ -3,7 +3,7 @@
   "Events": [
     {
       "name": "Alegria no Hospital de Santa Maria",
-      "category": "Humanitário",
+      "category": "Humanitary",
       "description": "Animar as crianças nas alas do centro hospitalar de Santa Maria",
       "organization": "Amigo Imaginário",
       "place": "Lisboa",
@@ -15,7 +15,7 @@
     },
     {
       "name": "Sopa para os Pobres",
-      "category": "Humanitário",
+      "category": "Humanitary",
       "description": "Entrega de roupa e comida aos sem-abrigo",
       "organization": "Vida Tem Abrigo",
       "place": "Lisboa",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Limpar Monsanto",
-      "category": "Conservação",
+      "category": "Conservation",
       "description": "Vem ajudar a limpar Monsanto",
       "organization": "Ajudar os Verdes",
       "place": "Lisboa",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Recolha para Moçambique",
-      "category": "Emergência",
+      "category": "Emergency",
       "description": "Recolha de alimentos e mantimentos para Moçambique",
       "organization": "Ajudantes Remotos",
       "place": "Lisboa",
@@ -63,7 +63,7 @@
     },
     {
       "name": "Recolha para Moçambique",
-      "category": "Emergência",
+      "category": "Emergency",
       "description": "Recolha de alimentos e mantimentos para Moçambique",
       "organization": "Somos Amigos",
       "place": "Portugal",
@@ -87,7 +87,7 @@
     },
     {
       "name": "Limpar Grafitos",
-      "category": "Conservação",
+      "category": "Conservation",
       "description": "Remover os grafitos na área circundante do Terminal Rodoviário de Algés",
       "organization": "Somos Amigos",
       "place": "Oeiras",
@@ -99,7 +99,7 @@
     },
     {
       "name": "Limpar o Parque Vale do Silêncio",
-      "category": "Conservação",
+      "category": "Conservation",
       "description": "Voluntário no festival do Nos Alive",
       "organization": "Somos Amigos",
       "place": "Oeiras",
