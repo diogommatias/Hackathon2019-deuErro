@@ -2,6 +2,7 @@
   "Organizations": [
     {
       "name": "Ajudantes Remotos",
+      "icon": "https://banner2.kisspng.com/20180319/qbq/kisspng-web-development-world-wide-web-computer-icons-webs-world-wide-web-icon-png-5ab05c23af4479.0595655515215073637179.jpg",
       "description": ""
     },
     {
@@ -18,6 +19,12 @@
     }, 
     {
       "name": "Tudo Novo",
+      "icon": "https://cdn0.iconfinder.com/data/icons/interface-set-vol-2/50/Menu_Options-2-512.png",
+      "description": ""
+    },
+    {
+      "name": "Somos Amigos",
+      "icon": "https://static.thenounproject.com/png/172436-200.png",
       "description": ""
     }
   ]

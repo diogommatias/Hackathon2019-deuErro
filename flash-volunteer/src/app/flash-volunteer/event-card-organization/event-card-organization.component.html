@@ -1,0 +1,18 @@
+<mat-card class="all-card" *ngIf="event !== null">
+    <mat-card-header>
+      <div mat-card-avatar class="example-avatar"></div>
+      <mat-card-title>{{eventName}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <p>Location: {{eventLocation}}</p>
+        <p>{{eventDescription}}</p>
+      </div>
+      <div>
+        <p> Start date: {{eventStartDate | date}} </p>
+        <p> End date: {{eventEndDate | date}} </p>
+        <p> Start time: {{eventStartTime}} </p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

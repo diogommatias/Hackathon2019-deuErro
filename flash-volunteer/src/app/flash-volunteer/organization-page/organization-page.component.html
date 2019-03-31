@@ -10,13 +10,13 @@
     <p>Eventos:</p>
     <mat-tab-group>
       <mat-tab label="Em progresso">
-        <app-event-card *ngFor="let e of events" [event]="e"> </app-event-card>
+        <app-event-card-organization *ngFor="let e of sortedEventsInProgress" [event]="e"> </app-event-card-organization>
       </mat-tab>
       <mat-tab label="Próximos">
-        <app-event-card *ngFor="let e of events" [event]="e"> </app-event-card>
+        <app-event-card-organization *ngFor="let e of sortedEventsNew" [event]="e"> </app-event-card-organization>
       </mat-tab>
       <mat-tab label="Histórico">
-        <app-event-card *ngFor="let e of events" [event]="e"> </app-event-card>
+        <app-event-card-organization *ngFor="let e of sortedEventsDone" [event]="e"> </app-event-card-organization>
       </mat-tab>
     </mat-tab-group>
   </div>

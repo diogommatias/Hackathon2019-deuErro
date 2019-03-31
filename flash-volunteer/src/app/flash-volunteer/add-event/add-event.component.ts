@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import Events from "../../data/events.json"
+import { EventService } from 'src/app/event.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-event',
@@ -18,7 +19,7 @@ export class AddEventComponent implements OnInit {
     "Cultural"
   ]
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private es: EventService, private router: Router) { }
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -38,6 +39,11 @@ export class AddEventComponent implements OnInit {
   }
 
   submit() {
-    Events.Events.push(this.form.value);
+    this.es.addEvents(this.form.value);
+    this.router.navigate(['/cities/', this.form.value.place]);
+  }
+
+  cancel() {
+    this.router.navigate(['']);
   }
 }

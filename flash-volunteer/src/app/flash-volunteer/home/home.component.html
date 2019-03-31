@@ -9,7 +9,8 @@
   <div id="banner">
     <app-home-search (out)="tets($event)"></app-home-search>
     <div id="more">
-      <i class='fa fa-angle-down' style='font-size:36px'></i>
+      <button mat-button (click)="scroll(target)"><i class='fa fa-angle-down' style='font-size:36px'></i></button>
     </div>
   </div>
 </div>
+<app-prizes id="prizes"></app-prizes>

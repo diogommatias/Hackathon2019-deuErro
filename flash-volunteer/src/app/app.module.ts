@@ -27,6 +27,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { OrganizationPageComponent } from './flash-volunteer/organization-page/organization-page.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialog/event-regist-dialog.component';
+import { PrizesComponent } from './flash-volunteer/prizes/prizes.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list'; 
+import { MatDividerModule } from '@angular/material/divider';
+import { EventCardOrganizationComponent } from './flash-volunteer/event-card-organization/event-card-organization.component'; 
+import { MatButtonToggleModule } from '@angular/material/button-toggle'; 
 
 @NgModule({
   declarations: [
@@ -38,8 +44,11 @@ import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialo
     EventComponent,
     EventCardComponent,
     SearchPageComponent,
+    EventRegistDialogComponent,
+    PrizesComponent,
     OrganizationPageComponent,
-    EventRegistDialogComponent
+    EventRegistDialogComponent,
+    EventCardOrganizationComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +69,11 @@ import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialo
     MatIconModule,
     MatSelectModule,
     MatDialogModule,
+    MatGridListModule,
+    MatListModule,
+    MatDividerModule,
     MatTabsModule,
+    MatButtonToggleModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBfUYkYpDFuQyYYguhGB39Za726DuCcGT8'
     })

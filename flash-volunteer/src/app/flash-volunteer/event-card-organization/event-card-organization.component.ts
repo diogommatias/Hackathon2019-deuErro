@@ -3,11 +3,11 @@ import { EventRegistDialogComponent } from '../event-regist-dialog/event-regist-
 import { MatDialog, MatDialogConfig } from '@angular/material';
 
 @Component({
-  selector: 'app-event-card',
-  templateUrl: './event-card.component.html',
-  styleUrls: ['./event-card.component.css']
+  selector: 'app-event-card-organization',
+  templateUrl: './event-card-organization.component.html',
+  styleUrls: ['./event-card-organization.component.css']
 })
-export class EventCardComponent implements OnInit {
+export class EventCardOrganizationComponent implements OnInit {
 
   @Input() event: any;
 

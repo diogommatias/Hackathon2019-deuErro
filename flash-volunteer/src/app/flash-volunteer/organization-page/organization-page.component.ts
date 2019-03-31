@@ -9,19 +9,44 @@ import Events from '../../data/events.json';
 })
 export class OrganizationPageComponent implements OnInit {
 
+  currentOrg: any;
+
+  orgs = Organization.Organizations;
   events = Events.Events;
-  org: any;
+  
+  sortedEventsInProgress = new Array();
+  sortedEventsNew = new Array();
+  sortedEventsDone = new Array();
 
   constructor() { }
 
   ngOnInit() {
-    let index: number = Math.floor(Math.random() * (Organization.Organizations.length - 0 + 1)) + 0;
-    this.org = Organization.Organizations[index];
+    this.currentOrg = this.orgs[5];
+    
+    this.sortEvents();
   }
 
   organizationName() {
-    return this.org.name;
+    return this.currentOrg.name;
   }
+
+  sortEvents(){
+    this.events.forEach((event) =>{
+      if(event.organization === this.currentOrg.name){
+        if(event.status === "in progress") {
+          this.sortedEventsInProgress.push(event);
+        }else 
+        if(event.status === "next") {
+          this.sortedEventsNew.push(event);
+        }else
+        if(event.status === "done") {
+          this.sortedEventsDone.push(event);
+        }
+      }
+    });
+  }
+
+  s
 
 
 }
