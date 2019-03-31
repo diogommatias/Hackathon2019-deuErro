@@ -30,7 +30,8 @@ import { EventRegistDialogComponent } from './flash-volunteer/event-regist-dialo
 import { PrizesComponent } from './flash-volunteer/prizes/prizes.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list'; 
-import { MatDividerModule } from '@angular/material/divider'; 
+import { MatDividerModule } from '@angular/material/divider';
+import { EventCardOrganizationComponent } from './flash-volunteer/event-card-organization/event-card-organization.component'; 
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { MatDividerModule } from '@angular/material/divider';
     EventRegistDialogComponent,
     PrizesComponent,
     OrganizationPageComponent,
-    EventRegistDialogComponent
+    EventRegistDialogComponent,
+    EventCardOrganizationComponent
   ],
   imports: [
     BrowserModule,

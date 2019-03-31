@@ -1,0 +1,14 @@
+.example-avatar {
+  background-image: url('https://static.thenounproject.com/png/172436-200.png');
+  background-size: cover;
+}
+
+.register-button {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.all-card {
+  border-bottom: 2px solid rgb(0,0,0);;
+}
