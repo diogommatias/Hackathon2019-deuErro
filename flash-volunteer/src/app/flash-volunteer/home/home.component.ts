@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import Cities from '../../data/cities.json';
 import { EventService } from 'src/app/event.service';
 
 @Component({
@@ -8,10 +9,9 @@ import { EventService } from 'src/app/event.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
-  flash_volunteer_logo = "../../../assets/img/logo.svg";
-  banner_background_image = "";
+  imgUrl;
 
+  flash_volunteer_logo = "../../../assets/img/logo.svg"
 
   constructor(private router: Router, private es: EventService) { }
 
@@ -24,7 +24,19 @@ export class HomeComponent implements OnInit {
     this.router.navigate([s]); 
   }
 
+  tets(s: string) {
+    function FindImgByName(task) {
 
-
-
+        if (task.name === this[0]) {
+            return task;
+        }
+    }
+    try {
+      var img = Cities.Cities.find(FindImgByName, [s]).img;
+      this.imgUrl = '../../../assets/img/' + img;
+      document.getElementById("home").style.backgroundImage = "url('"+this.imgUrl+"')";
+    } catch (e) {
+      console.log("lolada");
+    }
+  }
 }
