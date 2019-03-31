@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './city-view.component.html',
   styleUrls: ['./city-view.component.css']
 })
-export class CityViewComponent implements OnInit {
+export class CityViewComponent implements OnInit, OnChanges {
 
   private _events = new Array();
 
@@ -29,7 +29,7 @@ export class CityViewComponent implements OnInit {
   latitude: number;
   longitude: number;
 
-  markers: marker[] = [];
+  markers: marker[] = new Array();
 
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
@@ -47,6 +47,18 @@ export class CityViewComponent implements OnInit {
       this.setCityCenter();
     }
 
+  }
+
+  ngOnChanges(changes: SimpleChanges){
+    console.log(changes);
+    this._events = changes.events.currentValue;
+    
+    this.updateMarkers();
+  }
+
+  updateMarkers(){
+    this.markers = [];
+    this.loadMarkers();
   }
 
   loadMarkers() {
